@@ -6,7 +6,7 @@ var code = new Buffer(fs.readFileSync("./compile.js", {
                            encoding: "utf-8",
                             flag: "r"
                         })).toString("base64")
-var codeW = new Buffer(fs.readFileSync("./index.js", {
+var codeW = new Buffer(fs.readFileSync("./example.js", {
                             encoding: "utf-8",
                              flag: "r"
                          })).toString("base64")
@@ -130,7 +130,18 @@ const es = start({ // HEAD
             2: pos("center"),
             3: fontSize("50px")
         })
-    )
+    ),
+    41: p("You can get the code of Galaxtic.js by clicking the hyperlink below!", styles({
+        0: font("Arial, sans-serif"),
+        1: color("black"),
+    })),
+    42: a("Galaxtic.js", "https://github.com/BasharW10/glx", styles({
+        0: font("Arial, sans-serif"),
+        1: color("black"),
+        2: pos("center"),
+        3: fontSize("20px")
+    })),
+
 
 })
 
@@ -205,23 +216,6 @@ Why use Galaxtic?
 */
 
 fs.writeFileSync("./compiled.html", es)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
