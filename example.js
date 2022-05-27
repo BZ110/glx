@@ -210,7 +210,7 @@ Why use Galaxtic?
 
     In the end, galaxic.js is a great way to create HTML files for your app on the go.
     If you want to use it, you can download it from here:
-    Download link here.
+    https://github.com/BasharW10/glx
 
     Thank you for using Galaxtic.js!
 */
