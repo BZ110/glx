@@ -10,10 +10,11 @@ import {
     head,
     nullify
 
-} from "../compile.js"
+} from "../compile.js";
 import {
     writeFileSync
 } from "fs";
+// All functions used.
 const info = {
     name: "Transcript for xXNoobSlayerXx",
     info: [
@@ -44,8 +45,6 @@ let endhtml = start({
     0: head("<title>" + info.name + "</title>"),
 }, {
     0: html(transcript)
-}, {
-    "noTemplate": false,
 })
 nullify();
 
