@@ -41,7 +41,7 @@ var Medium = {
   0: `<!DOCTYPE html>\n<html lang="en">\n`,
   1: "<head>\n",
   2: "",
-  3: "</title>\n",
+  3: "",
   4: "</head>\n",
   5: "<body>\n",
   6: "\n",
@@ -52,6 +52,10 @@ export function vr(name, value){
   if(!name) throw new Error(errorBase[2]);
   if(!Variables[name]) Variables[name] = value;
   if(!value) return Variables[name];
+}
+export function startstyle(str){
+  if(!str) throw new Error(errorBase[2]);
+  Medium[2] = Medium[2] + str;
 }
 
 export function start(HEAD, OBJ){
