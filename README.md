@@ -5,7 +5,8 @@ A better way to write HTML for your app.
 For the most part, Galaxtic is a way to make HTML easier if you want to turn certain JavaScript values into a readable HTML file.
 
  For example, if you want to make a button, you can do this:
- ```start({
+ ```
+ start({
      0: head("<title> My Cool Website </title>"),
  },{
      0: btn("This is a button!", () => {
