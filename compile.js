@@ -7,7 +7,7 @@ Syntax Example
 )
 */
 const randint = (minimum, maxiumum) => {
-  return Math.floor(Math.random() * maxiumum) + minimum
+   Math.floor(Math.random() * maxiumum) + minimum
 }
 const Random10 = (agrt) => {
   if(!agrt) agrt = 10
@@ -28,7 +28,7 @@ const Random10 = (agrt) => {
       default: result += letters[Math.floor(Math.random() * letters.length)]
     }
   }
-  return result;
+   result;
 }
 var Variables = {};
 const errorPref = '\n\n     glx.js:'
@@ -37,7 +37,7 @@ const errorBase = {
   1: errorPref + " Inavlid Arguments.\n",
   2: errorPref + " Missing Key Inputs.\n",
 }
-var Medium = {
+let Medium = {
   0: `<!DOCTYPE html>\n<html lang="en">\n`,
   1: "<head>\n",
   2: "",
@@ -50,25 +50,41 @@ var Medium = {
 }
 export function vr(name, value){
   if(!name) throw new Error(errorBase[2]);
-  if(!Variables[name]) Variables[name] = value;
   if(!value) return Variables[name];
+  Variables[name] = value;
 }
 export function startstyle(str){
   if(!str) throw new Error(errorBase[2]);
   Medium[2] = Medium[2] + str;
 }
 
-export function start(HEAD, OBJ){
-  if(!HEAD) throw new Error(errorBase[2]);
+export function start(HEAD, OBJ, options){
+  if(!options) options = {
+    "noTemplate": false
+  }
+  if(!HEAD) if(!options["noTemplate"]) throw new Error(errorBase[2]);
+  if(options["noTemplate"]){
+    Medium[0] = "";
+    Medium[1] = "";
+    Medium[4] = "";
+    Medium[5] = "";
+    Medium[7] = "";
+    Medium[8] = "";
+  }
   if(!OBJ) throw new Error(errorBase[2]);
   const length = Object.keys(OBJ).length - 1;
   const lengthhd = Object.keys(HEAD).length - 1;
   if(length == -1) throw new Error(errorBase[0] + "start()\n");
-  for(let i = 0; i < lengthhd; i++){
+  if(HEAD) for(let i = 0; i < lengthhd; i++){
     eval(`${HEAD[i]}`);
   }
   for(let i = 0; i < length; i++){
-    eval(`${OBJ[i]}`);
+    try {
+      eval(`${OBJ[i]}`);
+    } catch(err) {
+      console.error(errorPref + " " + err);
+    }
+
   }
 
   var Return = '';
@@ -133,60 +149,60 @@ export function styles(Sole_Object){
 export function a(Name, hyperlink, styles){
   if(!Name) throw new Error(errorBase[2]);
   if(!hyperlink) throw new Error(errorBase[2]);
-  if(!styles) return Medium[6] = Medium[6] + `<a href="${hyperlink}">${Name}</a>\n`;
-  Medium[6] = Medium[6] + `<a style="${styles}" href="${hyperlink}">${Name}</a>\n`;
+  if(!styles)  Medium[6] = Medium[6] + `<a href="${hyperlink}">${Name}</a>\n`;
+  if(styles)   Medium[6] = Medium[6] + `<a style="${styles}" href="${hyperlink}">${Name}</a>\n`;
 }
 export function p(Name, styles){
   let Item = Name;
 
   if(!Item) throw new Error(errorBase[2]);
-  if(!styles) return Medium[6] = Medium[6] + `<p>${Item}</p>\n`;
-  Medium[6] = Medium[6] + `<p style="${styles}">${Item}</p>\n`;
+  if(!styles)  Medium[6] = Medium[6] + `<p>${Item}</p>\n`;
+  if(styles)   Medium[6] = Medium[6] + `<p style="${styles}">${Item}</p>\n`;
 }
 export function h1(Name, styles){
   let Item = Name;
 
   if(!Item) throw new Error(errorBase[2]);
-  if(!styles) return Medium[6] = Medium[6] + `<h1>${Item}</h1>\n`;
-  Medium[6] = Medium[6] + `<h1 style="${styles}">${Item}</h1>\n`;
+  if(!styles)  Medium[6] = Medium[6] + `<h1>${Item}</h1>\n`;
+  if(styles)   Medium[6] = Medium[6] + `<h1 style="${styles}">${Item}</h1>\n`;
 }
 export function h2(Name, styles){
   let Item = Name;
 
   if(!Item) throw new Error(errorBase[2]);
-  if(!styles) return Medium[6] = Medium[6] + `<h2>${Item}</h2>\n`;
-  Medium[6] = Medium[6] + `<h2 style="${styles}">${Item}</h2>\n`;
+  if(!styles)  Medium[6] = Medium[6] + `<h2>${Item}</h2>\n`;
+  if(styles)   Medium[6] = Medium[6] + `<h2 style="${styles}">${Item}</h2>\n`;
 }
 export function h3(Name, styles){
   let Item = Name;
 
   if(!Item) throw new Error(errorBase[2]);
-  if(!styles) return Medium[6] = Medium[6] + `<h3>${Item}</h3>\n`;
-  Medium[6] = Medium[6] + `<h3 style="${styles}">${Item}</h3>\n`;
+  if(!styles)  Medium[6] = Medium[6] + `<h3>${Item}</h3>\n`;
+  if(styles)   Medium[6] = Medium[6] + `<h3 style="${styles}">${Item}</h3>\n`;
 }
 export function h4(Name, styles){
   let Item = Name;
 
   if(!Item) throw new Error(errorBase[2]);
-  if(!styles) return Medium[6] = Medium[6] + `<h4>${Item}</h4>\n`;
-  Medium[6] = Medium[6] + `<h4 style="${styles}">${Item}</h4>\n`;
+  if(!styles)  Medium[6] = Medium[6] + `<h4>${Item}</h4>\n`;
+  if(styles)   Medium[6] = Medium[6] + `<h4 style="${styles}">${Item}</h4>\n`;
 }
 export function h5(Name, styles){
   let Item = Name;
   if(!Item) throw new Error(errorBase[2]);
-  if(!styles) return Medium[6] = Medium[6] + `<h5>${Item}</h5>\n`;
-  Medium[6] = Medium[6] + `<h5 style="${styles}">${Item}</h5>\n`;
+  if(!styles)  Medium[6] = Medium[6] + `<h5>${Item}</h5>\n`;
+  if(styles)   Medium[6] = Medium[6] + `<h5 style="${styles}">${Item}</h5>\n`;
 }
 export function h6(Name, styles){
   let Item = Name;
   if(!Item) throw new Error(errorBase[2]);
-  if(!styles) return Medium[6] = Medium[6] + `<h6>${Item}</h6>\n`;
-  Medium[6] = Medium[6] + `<h6 style="${styles}">${Item}</h6>\n`;
+  if(!styles)  Medium[6] = Medium[6] + `<h6>${Item}</h6>\n`;
+  if(styles)   Medium[6] = Medium[6] + `<h6 style="${styles}">${Item}</h6>\n`;
 }
 
 export function alrt(str){
   if(!str) throw new Error(errorBase[2]);
-  Medium[6] = Medium[6] + `<script>alert("${str}")</script>\n`;
+  if(styles)   Medium[6] = Medium[6] + `<script>alert("${str}")</script>\n`;
 }
 export function scrpt(Callback, VariableName){
   let code =     Callback;
@@ -200,7 +216,7 @@ export function inpt(VariableName, Input){
   let varname = VariableName
   if(!varname)  throw new Error(errorBase[2]);
   if(!Input)    throw new Error(errorBase[2]);
-  Medium[6] = Medium[6] + `<script>const ${varname} = '${Input}';</script>\n`;
+                Medium[6] = Medium[6] + `<script>const ${varname} = '${Input}';</script>\n`;
 }
 export function btn(Title, Callback, styles){
   let OBJ = Title;
@@ -208,9 +224,9 @@ export function btn(Title, Callback, styles){
   let varname = Random10(50);
   if(!OBJ) throw new Error(errorBase[2]);
   if(!codeStr) if(!styles)  Medium[6] = Medium[6] + `<button>${OBJ}</button>\n`;
-  if(!codeStr) if(styles)  Medium[6] = Medium[6] + `<button style="${styles}>${OBJ}</button>\n`;
-  if(codeStr) if(!styles) Medium[6] = Medium[6] + `<script>const ${varname} = ${codeStr};</script>\n<button onclick="${varname}()">${OBJ}</button>\n`;
-  if(codeStr) if(styles) Medium[6] = Medium[6] + `<script>const ${varname} = ${codeStr};</script>\n<button onclick="${varname}()" style="${styles}">${OBJ}</button>\n`;
+  if(!codeStr) if(styles)   Medium[6] = Medium[6] + `<button style="${styles}>${OBJ}</button>\n`;
+  if(codeStr) if(!styles)   Medium[6] = Medium[6] + `<script>const ${varname} = ${codeStr};</script>\n<button onclick="${varname}()">${OBJ}</button>\n`;
+  if(codeStr) if(styles)    Medium[6] = Medium[6] + `<script>const ${varname} = ${codeStr};</script>\n<button onclick="${varname}()" style="${styles}">${OBJ}</button>\n`;
 }
 export function margin(str){
   if(!str) throw new Error(errorBase[2]);
@@ -296,5 +312,18 @@ export function html(str){
 }
 export function head(str){
   if(!str) throw new Error(errorBase[2]);
-  Medium[2] = Medium[2] + `${str}\n`;
+  return Medium[2] = Medium[2] + `${str}\n`;
+}
+export function nullify(){
+  Medium[0] = `<!DOCTYPE html>\n<html lang="en">\n`,
+  Medium[1] = "<head>\n",
+  Medium[2] = "",
+  Medium[3] = "",
+  Medium[4] = "</head>\n",
+  Medium[5] = "<body>\n",
+  Medium[6] = "\n",
+  Medium[7] = "</body>\n",
+  Medium[8] = "</html>\n",
+  Variables = {};
+
 }
