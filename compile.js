@@ -312,7 +312,7 @@ export function html(str){
 }
 export function head(str){
   if(!str) throw new Error(errorBase[2]);
-  return Medium[2] = Medium[2] + `${str}\n`;
+  Medium[2] = Medium[2] + `${str}\n`;
 }
 export function nullify(){
   Medium[0] = `<!DOCTYPE html>\n<html lang="en">\n`,
