@@ -63,7 +63,7 @@ nullify() erases that completely.
 noTemplate erases the head, and the body, including <!DOCTYPE HTML> tags.
 The whole point of it is to do stuff like for loops without the code continously adding the body and head tags.
 if noTemplate is true, you don't need to declare anything in the first object or "dictionary".
-#### You don't need it.
+##### You don't need it.
 
 
 
