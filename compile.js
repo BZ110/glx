@@ -38,7 +38,7 @@ const errorBase = {
   2: errorPref + " Missing Key Inputs.\n",
 }
 let Medium = {
-  0: `<!DOCTYPE html>\n<html lang="en">\n`,
+  0: `<!-- https://github.com/BasharW10/glx -->\n<!DOCTYPE html>\n<html lang="en">\n`,
   1: "<head>\n",
   2: "",
   3: "",
