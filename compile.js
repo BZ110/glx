@@ -28,7 +28,7 @@ const Random10 = (agrt) => {
       default: result += letters[Math.floor(Math.random() * letters.length)]
     }
   }
-   result;
+  return result;
 }
 var Variables = {};
 const errorPref = '\n\n     glx.js:'
