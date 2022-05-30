@@ -1,4 +1,4 @@
-import { start, h1, p, styles, vr, font, color, pos, posPad, a, btn, alrt, h6, h5, h4, h3, h2, fontSize, scrpt, inpt, css, html, head } from './compile.js';
+import { start, h1, p, styles, vr, font, color, pos, posPad, a, btn, alrt, h6, h5, h4, h3, h2, fontSize, scrpt, inpt, css, html, head } from './glx.js';
 import fs from 'fs';
 
 
