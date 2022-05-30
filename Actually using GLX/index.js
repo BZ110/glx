@@ -10,7 +10,7 @@ import {
     head,
     nullify
 
-} from "../compile.js";
+} from "../glx.js";
 import {
     writeFileSync
 } from "fs";
