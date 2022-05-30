@@ -1,4 +1,4 @@
-// glx.js (GALAXTIC.Javascript)
+// glx.js (GALAXTIC.Javascript) (The smaller version, you can use this version if you care about how big your file is and you don't care about efficiency.
 /*
 Syntax Example
   h1(
