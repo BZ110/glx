@@ -48,4 +48,4 @@ You can use inpt to declare the variable inside a script tag.
 You can use vr for styles, too.
 
 Check example.js and compile.js for more information.
-Check compiled.html for the end result.
+Check compiled.html for the end result. You can find compiled.html by compiling it yourself.
