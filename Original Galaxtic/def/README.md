@@ -1,5 +1,5 @@
 # def
-Needed files.
+Needed files, or uncategorized.
 
 ## What is the def file?
 The def file contains classes, functions, etc that are needed to be used everywhere.
