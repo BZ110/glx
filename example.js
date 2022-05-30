@@ -2,7 +2,7 @@ import { start, h1, p, styles, vr, font, color, pos, posPad, a, btn, alrt, h6, h
 import fs from 'fs';
 
 
-var code = new Buffer(fs.readFileSync("./compile.js", {
+var code = new Buffer(fs.readFileSync("./glx.js", {
                            encoding: "utf-8",
                             flag: "r"
                         })).toString("base64")
