@@ -1,5 +1,5 @@
 import { start, $, color, pos, styles, h1, h2, css, font } from "./index.js"
-import {writeFileSync} from "fs";
+import { writeFileSync } from "fs";
 
 // lets try a random password generator. (example of using my module)
 
