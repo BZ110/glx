@@ -86,10 +86,6 @@ export const start = (Head, Body, Settings) => {
     }
 }
 
-/** Styles
- * @param {Object={}} Obj - An object filled with style variables. If you know 2% of code, you know what they are. (color, pos, etc)
- */
-
 export function nullify(){
     Medium = Def;
 }
