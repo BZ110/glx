@@ -22,7 +22,7 @@ We will add a head. This will contain the title of our document. Since our docum
 ```js
 return res.send(start({
   0: $("title", "Pass Generator"),
-  1: styles("body { background-color: #141414; }")
+  1: $("style", "body { background-color: #141414; }")
 }));
 ```
 ---
