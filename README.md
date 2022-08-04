@@ -5,7 +5,7 @@ A better way to write HTML for your app.
 For the most part, Galaxtic is a way to make HTML easier if you want to turn certain JavaScript values into a readable HTML file.
 
  For example, if you want to make a button, you can do this:
- ```
+ ```js
  start({
      0: head("<title> My Cool Website </title>"),
  },{
@@ -20,7 +20,7 @@ For the most part, Galaxtic is a way to make HTML easier if you want to turn cer
      
 You can do this:
 
-```
+```js
 start({
     0: head("<title> My Cool Website </title>"),
 },{
@@ -32,19 +32,19 @@ start({
 ```
 If you want to put it inside a button, you can't use vr, because it's not a variable inside the button.
 You can use inpt to declare the variable inside a script tag.
-
-    start({
-        0: head("<title> My Cool Website </title>"),
-    }, {
-        0: inpt("MyValueisNowInHTML", value), // Creates a script tag with a variable inside it.
-        1: btn("This is a button!", () => {
-            console.log("Buttons are cool!");
-            alert(MyValueisNowInHTML);
-        }, styles({
-            0: font("Arial"),
-        }))
-    })
-    
+```js
+start({
+    0: head("<title> My Cool Website </title>"),
+}, {
+    0: inpt("MyValueisNowInHTML", value), // Creates a script tag with a variable inside it.
+    1: btn("This is a button!", () => {
+        console.log("Buttons are cool!");
+        alert(MyValueisNowInHTML);
+    }, styles({
+        0: font("Arial"),
+    }))
+})
+``` 
 You can use vr for styles, too.
 
 Check example.js and compile.js for more information.
