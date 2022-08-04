@@ -106,7 +106,7 @@ res.send(start({
           result += x[Math.floor(Math.random() * x.length)];
       }
       return result;
-  })(), [ // << Here, we finish the function, so we add "()" so initialize the function and to return our random password.
+  })(), [ // << Here, we finish the function, so we add "()" to initialize the function and to return our random password.
       {"style": mainStyle},
       {"style": "padding-top: 1em;"}
   ])
