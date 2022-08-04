@@ -92,7 +92,15 @@ export function nullify(){
 
 export function $(Type, Item, Args){
     !Args ? Args = [] : Args; 
-    return new txt(Type, Item, Args).reg();
+    let p = '\n';
+    if(typeof item == "object"){
+        for(let i = 0; i < Object.keys(Item).length; i++){
+            p+=Item[i] + "\n";
+        }
+    } else {
+        p = Item;
+    }
+    return new txt(Type, p, Args).reg();
 }
 
 export function cPT(Item){
