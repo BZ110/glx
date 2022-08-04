@@ -1,7 +1,7 @@
 # The basics of GLX.
 Here, you will learn the functions of GLX and example cases.
 ## Important functions.
-These functions are the funcutons you will most likely use in GLX.
+These functions are the functions you will most likely use in GLX.
 ```js
 import { start, $ } from "./pkg.js";
 ```
