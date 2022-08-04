@@ -1,6 +1,7 @@
 # glx.js (Galaxtic.js)
 A better way to write HTML for your app.
 
+*This documentation is outdated.*
 ## Why use Galaxtic? (GLX)
 For the most part, Galaxtic is a way to make HTML easier if you want to turn certain JavaScript values into a readable HTML file.
 
