@@ -19,8 +19,8 @@ import { start, h1 } from "./pkg.js";
 const returnedHTML = start({}, {
    0: h1("Hello, World!") // Header 1
 }, {
-  "NoTMP": false, // NoTMP: Boolean - Whether to include required HTML code. Typically used in for loops. Default is false.
-  "nullify": true // nullify: Boolean - Whether to reset all memory after execution of function. Default is true.
+   "NoTMP": false, // NoTMP: Boolean - Whether to include required HTML code. Typically used in for loops. Default is false.
+   "nullify": true // nullify: Boolean - Whether to reset all memory after execution of function. Default is true.
 });
 ```
 
