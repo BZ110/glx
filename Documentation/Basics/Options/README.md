@@ -26,7 +26,7 @@ This setting accepts a boolean. This setting decides whether or not to reset the
   start({}, {
     0: h1("Hello, World")
   }, {
-    "NoTMP": false,
+    "NoTMP": true,
     "nullify": false
   }) // Returns: <h1>Hello, World</h1>
 
@@ -34,7 +34,7 @@ This setting accepts a boolean. This setting decides whether or not to reset the
   start({}, {
     0: h1("Hello, World")
   }, {
-    "NoTMP": false,
+    "NoTMP": true,
     "nullify": false
   }) // Returns: <h1>Hello, World</h1><h1>Hello, World</h1>
 ```
