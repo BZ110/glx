@@ -1,52 +1,32 @@
 # glx.js (Galaxtic.js)
-A better way to write HTML for your app.
+A better way to write HTML for your app. *lol html go brrrrr*
 
-*This documentation is outdated.*
-## Why use Galaxtic? (GLX)
+## Why use glx.js?
 For the most part, Galaxtic is a way to make HTML easier if you want to turn certain JavaScript values into a readable HTML file.
+- **It's free!**
+- It's easy to use.
+- It's code is very straight-forward.
+- It's made for Node.js, **when you need to turn certain values into a proper readable HTML file.**
+- Using it is as easy as a `start();` variable.
 
- For example, if you want to make a button, you can do this:
- ```js
- start({
-     0: head("<title> My Cool Website </title>"),
- },{
-     0: btn("This is a button!", () => {
-         console.log("Buttons are cool!");
-         alert("Awesome!");
-     })
- })
- ```
- But thats not what GLX is for. GLX is for the functions inpt and vr.
-     Let's just say you have a value, and your app wants to show that value in an HTML file, that's simple!
-     
-You can do this:
+## How do I use glx.js?
+Read `./Documentation` for more information.
 
-```js
-start({
-    0: head("<title> My Cool Website </title>"),
-},{
-    0: vr("MyValueisNowInMem", value), // Saves to memory for later use.
-    1: p(vr("MyValueisNowInMem"), styles({
-        0: font("Arial"),
-    }))
-})
-```
-If you want to put it inside a button, you can't use vr, because it's not a variable inside the button.
-You can use inpt to declare the variable inside a script tag.
-```js
-start({
-    0: head("<title> My Cool Website </title>"),
-}, {
-    0: inpt("MyValueisNowInHTML", value), // Creates a script tag with a variable inside it.
-    1: btn("This is a button!", () => {
-        console.log("Buttons are cool!");
-        alert(MyValueisNowInHTML);
-    }, styles({
-        0: font("Arial"),
-    }))
-})
-``` 
-You can use vr for styles, too.
+## What even is glx.js?
+Galaxtic.js, also can be referred to as GLX, glx.js, or Galaxtic in itself, is a package made by Critical#1119, for the sole purpose of writing easier-to-read HTML in Node.js. To know whether or not a program is using Galaxtic, you will see a `start();` function with 2 to 3 objects in it. You will also see a `export default class txt` somwhere inside the program in one of the files. Galaxtic is very simple, the code is simple, they way you make an HTML file with it is simple, and best of all, it's all open-sourced!
+- I do allow people making forks of Galaxtic.js, though, you will not get any support from me if you encounter an error.
+- I do allow people to use Galaxtic.js without crediting me, but please credit me when you do. It means a lot.
+- I do not, however, allow people to fork my creation without any modifications. Also, I hate malware, **don't add it to your fork.**
 
-Check example.js and compile.js for more information.
-Check compiled.html for the end result. You can find compiled.html by compiling it yourself.
+## I have a question, where do I get it answered?
+*Have any questions? Message me on Discord! Critical#1119*
+
+I will not answer questions from builds of Galaxtic that are forked. That is simply something I won't do, I will however, answer any **JavaScript related questions.**
+
+## Where did you get the idea to make Galaxtic?
+When I was bored, I thought of an idea, took 1 hour to make the prototype, and a day to make the finished version, and now, I'm still updating it as of 2022-08-05!
+
+*I was also listening to music lol*
+
+## When should I use Galaxtic in my code?
+You should definitely use it only when you're creating something that needs to show data in some way. For example, a Discord Bot, an express application, or even some package you're making! You're allowed to use, modify, and re-create Galaxtic.
