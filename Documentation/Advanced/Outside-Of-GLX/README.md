@@ -11,11 +11,12 @@ You can return raw HTML values like so:
 /*-- Make it compact? --*/
 return ( $("div", { 0: h1("Hello, World!") }) )
 
-/*-- Let's space it out a bit and add some whitespace! --*/
+/*-- Add more whitespace, and another object too! --*/
 return (
   $("div", {
     0: h1("Hello, World!")
-  })
+  }),
+  h1("Hello World! Again.")
 )
 ```
 These functions are specifically for GLX, yet are being used differently. This is because of the simplicity of GLX. GLX does not force you to use the `start();` variable.
@@ -24,3 +25,5 @@ These functions are specifically for GLX, yet are being used differently. This i
 - Functions return **string values.**
 - Functions do not check the env. that they are in.
 - The purpose of these functions is to allow easy-to-read HTML code, in JavaScript.
+
+Furthermore, you can use GLX however you like. I completely allow you to isolate the functions of GLX and put them inside your code.
