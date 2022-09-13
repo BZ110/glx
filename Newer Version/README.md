@@ -2,7 +2,7 @@
 
 ## An example on how to use it.
 
-
+```js
     import { start, $, color, pos, styles, h1, h2, css, font } from "./index.js"
     import { writeFileSync } from "fs";
 
@@ -38,9 +38,10 @@
         0: h1("Hello, World", [{"style": defStyle}]),
         1: h2("Your random password is: " + randPass(10), [{"style": defStyle}, {"style": "padding-top: 1em;"}])
     }))
-
+```
 You can see defining arguments is much easier than the original GLX, this will also soon be used inside a discord bot that I will open source soon. :)
 
 This also works with express, since it returns HTML, you can simply do:
-
-        res.send(start({0: $("title", "My Cool Title")}, {0: h1("Hello, World!)}))
+```js
+res.send(start({0: $("title", "My Cool Title")}, {0: h1("Hello, World!")}))
+```
