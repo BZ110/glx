@@ -14,4 +14,4 @@ The current supported versions.
 ## Reporting a Vulnerability
 When reporting a vulnerability, please report it to my discord.
 
-Discord: Critical#119
+Discord: Critical#1119
